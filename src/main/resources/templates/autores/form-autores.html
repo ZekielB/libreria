@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario alta autor</title>
+</head>
+<body>
+<h1>Crear autor</h1>
+
+<form th:action="@{/autores/formulario}" method="post" th:object="${autor}">
+
+    <input type="hidden" th:value="${autor.id}"/>
+
+    <label> Nombre:
+        <input type="text" th:field="*{nombre}"/>
+    </label>
+
+    <input type="submit" value='Guardar'/>
+
+
+</form>
+
+</body>
+</html>
